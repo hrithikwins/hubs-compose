@@ -9,3 +9,7 @@ echo -e ${prefix}The mutagen daemon will stay running until you stop it manually
 
 echo -e ${prefix}Running mutagen-compose...$suffix
 mutagen-compose -f "$basedir"/docker-compose.yml up --build --detach
+
+
+echo -e ${prefix}Viewing logs of containers...$suffix
+mutagen-compose -f "$basedir"/docker-compose.yml logs -f
